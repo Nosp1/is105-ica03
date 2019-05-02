@@ -1,7 +1,0 @@
-Frequence resultat: 
-
-Antall linjer: 124786" ", 1285884
-"e", 406157
-"t", 291243
-"o", 282560
-"a", 245509

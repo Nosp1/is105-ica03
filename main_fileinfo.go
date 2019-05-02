@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Nosp1/Is-105/is105-ica03/frequence"
+	"github.com/Nosp1/Is-105/is105-ica03/fileinfo"
 	"os"
 )
 
@@ -19,7 +19,8 @@ func main() {
 	// om lengden på argumentene i kommandolinje er  3 og posisjon 1 har "-f" så kjører Befrequence.
 	if len(args) == 3 {
 		if args[1] == "-f" {
-			frequence.Bfrequence(args[2])
+			fileinfo.FileReader(args[2])
 		}
 	}
 }
+

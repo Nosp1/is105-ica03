@@ -21,12 +21,12 @@ func BenchmarkBfrequenceBible(b *testing.B) {
 	benchBible(1,b)
 
 }
-// funksjonene under er hjelpe funksjoner for benchmarking. blant annet, valg av fil og hvor mange ganger benchmark skal kjøres
+// funksjonene under er hjelpe funksjoner for benchmarking. Blant annet, valg av fil og hvor mange ganger benchmark skal kjøres
 func benchpg100(i int, b *testing.B) {
 	for n := 0; n < b.N; n++{
 		b.StopTimer()
 		b.StartTimer()
-		Bfrequence("../files/pg100.txt")
+		BfrequenceForBench("../files/bible2.txt")
 
 	}
 
@@ -35,13 +35,13 @@ func benchBible2(i int, b*testing.B){
 	for n := 0; n < b.N; n++{
 		b.StopTimer()
 		b.StartTimer()
-		Bfrequence("../files/bible2.txt")
+		BfrequenceForBench("../files/bible2.txt")
 	}
 }
 func benchBible(i int, b*testing.B){
 	for n := 0; n < b.N; n++{
 		b.StopTimer()
 		b.StartTimer()
-		Bfrequence("../files/bible.txt")
+		BfrequenceForBench("../files/bible.txt")
 	}
 }
