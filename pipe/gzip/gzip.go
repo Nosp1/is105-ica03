@@ -21,7 +21,7 @@ func GZipReturn(s string) string {
 		log.Fatal(err)
 	}
 
-	return fmt.Sprintln(buffer)
+	return fmt.Sprintf(buffer)
 }
 
 func GZipReturnBytes(b []byte) []byte {
