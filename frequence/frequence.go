@@ -89,9 +89,10 @@ func WriteToFileFreq(filepath string, lines []string,   ts []kv ) {
 	}
 
 	defer write.Close()
-	fmt.Println("Writing to file")
+	fmt.Println("Writing results to file")
 	fmt.Fprintln(write,"Frequence resultat: ")
 	fmt.Fprintf(write, "\nAntall linjer: %v", len(lines))
+	fmt.Fprintln(write, "De mest brukte runene er: ")
 	for i := 0; i< 5; i ++{
 		fmt.Fprintf(write, "%q, %d\n", ts[i].Key, ts[i].Value)
 	}

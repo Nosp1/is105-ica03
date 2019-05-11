@@ -16,7 +16,7 @@ func main() {
 		feilmelding := "Du mangler filepath. For eksempel: ./files/pg100.txt"
 		panic(feilmelding)
 	}
-	// om lengden på argumentene i kommandolinje er  3 og posisjon 1 har "-f" så kjører Befrequence.
+	// om lengden på argumentene i kommandolinje er  3 og posisjon 1 har "-f" så kjører Fileinfo.FileReader.
 	if len(args) == 3 {
 		if args[1] == "-f" {
 			fileinfo.FileReader(args[2])

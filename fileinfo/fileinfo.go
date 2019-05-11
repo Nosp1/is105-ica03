@@ -21,9 +21,9 @@ func FileReader(name string) {
 
 	fileMode :=fileinfo.Mode()
 	appOnly := fileMode&os.ModeAppend != 0
-	device := false
-	unixChar := false
-	unixBlock := false
+	var device bool
+	var unixChar  bool
+	var unixBlock bool
 	//checks whether file is Device
 	if fileMode&os.ModeDevice != 0 {
 		device = true

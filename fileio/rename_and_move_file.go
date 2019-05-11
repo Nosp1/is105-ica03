@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func main() {
+func ReNameAndMoveFile() {
 	originalPath := "test.txt"
 	newPath := "test2.txt"
 	err := os.Rename(originalPath, newPath)

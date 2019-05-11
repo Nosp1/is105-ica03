@@ -1,12 +1,12 @@
 package fileio
-//oppgave 3a
+
 import (
 	"log"
 	"os"
 )
 
-func main() {
-	err := os.Truncate("test.txt", 100)
+func DeleteFile() {
+	err := os.Remove("test2.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

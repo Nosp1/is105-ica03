@@ -31,10 +31,10 @@ func Bfrequence(fileName string) {
 	path = dir + fileBase + strconv.Itoa(len(dirEntries)) + ".txt"
 
 	f, _ := os.Open(fileName)
-	for index, line := range LinesInFileBuffered(fileName) {
-		// HUSK Å ENDRE TILBAKE SEINERE
-		fmt.Sprintf("Index = %v, line = %v\n", index, line)
-	}
+	//for index, line := range LinesInFileBuffered(fileName) {
+
+		//fmt.Sprintf("Index = %v, line = %v\n", index, line)
+	//}
 	defer f.Close()
 	// Get count of lines.
 	lines := LinesInFileBuffered(fileName)
@@ -95,9 +95,9 @@ func writeToFile(filepath string, list lflist, lines []string) string {
 	defer write.Close()
 
 	w := bufio.NewWriter(write)
-	fmt.Println("Writing to file")
+	fmt.Println("Writing results to file")
 	fmt.Fprintln(w, "Bfrequence resultat: ")
-	fmt.Fprint(w, "De mest brukte filene er ")
+	fmt.Fprint(w, "De mest brukte runene er: ", )
 	for i := 0; i < 5; i ++ {
 		_, err = fmt.Fprintf(w, "\n%+q %7d\n", list[i].string, list[i].freq)
 	}
@@ -153,10 +153,10 @@ for å lettere kunne kjøre benchmarks.
  */
 func BfrequenceForBench(fileName string) {
 	f, _ := os.Open(fileName)
-	for index, line := range LinesInFileBuffered(fileName) {
-		// HUSK Å ENDRE TILBAKE SEINERE
-		fmt.Sprintf("Index = %v, line = %v\n", index, line)
-	}
+	//for index, line := range LinesInFileBuffered(fileName) {
+
+	//	fmt.Sprintf("Index = %v, line = %v\n", index, line)
+	//}
 	defer f.Close()
 	// Get count of lines.
 	lines := LinesInFileBuffered(fileName)

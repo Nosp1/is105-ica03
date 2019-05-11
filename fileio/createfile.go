@@ -1,6 +1,7 @@
 package fileio
 
 import (
+	"fmt"
 	"log"
 	"os"
 )
@@ -10,13 +11,18 @@ var (
 	err1    error
 )
 
-func main() {
+func CreateFile() {
 	newFile, err1 = os.Create("test.txt")
 	if err1 != nil {
 		log.Fatal(err1)
 	}
 	log.Println(newFile)
-	newFile.Close()
+	if err := newFile.Close(); err != nil {
+		fmt.Errorf("The file failed to close: %v", err)
+	} else {
+		fmt.Println("the file was succesfully created")
+	}
+
 
 
 }
